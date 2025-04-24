@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'hesap.dart';
-import 'ayarlar.dart';
+//import 'ayarlar.dart';
 import 'destek.dart';
 import 'fatura.dart';
 import 'giris.dart';
+import 'ssssayfasi.dart';
 
 void main() => runApp(MyApp());
 
@@ -20,7 +21,9 @@ class MyApp extends StatelessWidget {
         '/': (context) => HomeScreen(),
         '/bills': (context) => FaturaSayfasi(),
         '/account': (context) => HesapSayfasi(),
-        '/settings': (context) => AyarlarSayfasi(),
+        //'/settings': (context) => AyarlarSayfasi(),
+        '/sss': (context) => SSSSayfasi(),
+
         '/support': (context) => DestekSayfasi(),
       },
     );
@@ -128,17 +131,25 @@ class AppDrawer extends StatelessWidget {
             leading: Icon(Icons.account_circle),
             title: Text('Hesap Bilgileri'),
             onTap: () {
-              Navigator.pop(context); // Drawer False
+              Navigator.pop(context);
               Navigator.pushNamed(context, '/account');
             },
           ),
-          ListTile(
+          /*ListTile(
             leading: Icon(Icons.settings),
             title: Text('Ayarlar'),
             onTap: () {
               Navigator.pushNamed(context, '/settings');
             },
+          ),*/
+          ListTile(
+            leading: Icon(Icons.question_answer),
+            title: Text('Sık Sorulan Sorular'),
+            onTap: () {
+              Navigator.pushNamed(context, '/sss');
+            },
           ),
+
           ListTile(
             leading: Icon(Icons.support),
             title: Text('Destek'),
