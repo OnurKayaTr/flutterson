@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'hesap.dart';
 import 'ayarlar.dart';
 import 'destek.dart';
+import 'fatura.dart';
+import 'giris.dart';
 
 void main() => runApp(MyApp());
 
@@ -12,12 +14,13 @@ class MyApp extends StatelessWidget {
       title: 'CANNET ANA SAYFA',
 
       theme: ThemeData(primarySwatch: Colors.blue),
-      initialRoute: '/',
+      initialRoute: '/login',
       routes: {
+        '/login': (context) => GirisSayfasi(),
         '/': (context) => HomeScreen(),
-        '/bills': (context) => DummyPage(title: 'Faturaları Görüntüle'),
+        '/bills': (context) => FaturaSayfasi(),
         '/account': (context) => HesapSayfasi(),
-        '/settings': (context) => DummyPage(title: 'Ayarlar'),
+        '/settings': (context) => AyarlarSayfasi(),
         '/support': (context) => DestekSayfasi(),
       },
     );
