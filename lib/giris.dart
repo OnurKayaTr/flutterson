@@ -118,6 +118,8 @@ class _GirisSayfasiState extends State<GirisSayfasi> {
                       ),
                     ),
                   ),
+              Text('Giris bilgi = E-posta: eve.holt@reqres.in'),
+              Text('Giris bilgi = Şifre: cityslicka'),
             ],
           ),
         ),
